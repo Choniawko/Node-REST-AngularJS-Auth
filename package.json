@@ -9,9 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.7.1",
     "express": "^4.13.3"
   },
   "devDependencies": {
-    "Faker": "^0.7.2"
+    "Faker": "^0.7.2",
+    "body-parser": "^1.14.2"
   }
 }

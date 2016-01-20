@@ -1,19 +1,33 @@
 var express = require('express');
 var faker   = require('faker');
+var cors    = require('cors');
+var bodyParser = require('body-parser');
+
+var user = {
+	username: 'admin',
+	password: 'admin'
+}	
 
 var app = express();
+app.use(cors());
+app.use(bodyParser.json());
 
-var users = [];
-	for (var i = 1; i <= 6; i++) {
-		user = faker.Helpers.userCard();
-		user.id = i;
-	 	users.push(user);
-	 }; 
+
 
 app.get('/random-user', function(req, res) {
-	res.json(users);
+	var user = faker.Helpers.userCard();
+	user.avatar = faker.Image.avatar();
+	res.json(user);
 });
+
+app.post('/login', authenticate, function(req, res) {
+
+})
 
 app.listen(3000, function () {
 	console.log('Aplikacja nasłuchuje na porcie 3000');
 });
+
+function authenticate(req, res, next) {
+
+}
