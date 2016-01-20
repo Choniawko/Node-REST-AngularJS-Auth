@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var jwt        = require('jsonwebtoken'); 
 
 
-var jwtSecret = 'fjkdlsajfoew239053/3uk';
+var jwtSecret = 'fjkdlsdjfoew23d053/3uk';
 
 var user = {
 	username: 'admin',
