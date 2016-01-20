@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.7.1",
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "jsonwebtoken": "^5.5.4"
   },
   "devDependencies": {
     "Faker": "^0.7.2",
